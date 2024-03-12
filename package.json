@@ -1,0 +1,16 @@
+{
+  "dependencies": {
+    "node": "^21.7.1"
+  },
+  "name": "estagio-ribeirao-preto",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "dev": "node exercicio-3/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
