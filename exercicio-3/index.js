@@ -3,6 +3,7 @@ let numerosPares = [2,4,8,16,32,64]
 let numerosPerfeitos = [0,1,4,9,16,25,36]
 let numerosQuadradosPares = [4,16,36,64]
 let numerosFibonacci = [1,1,2,3,5,8]
+let numerosSequenciais = [2,10,12,16,17,18,19]
 // A)
 const sequenciaImpar = (numeros) =>{
   let proximoNumero
@@ -61,12 +62,16 @@ const sequenciaFibonacci = (valor) =>{
 
     proximoValor = valor1 + valor2
 
-    return proximoValor
-    
-    
+    return proximoValor       
+}
+// F)
+const sequenciaIrregular = (numerosSequenciais) =>{
+    let proximoNumero = numerosSequenciais[numerosSequenciais.length - 1] + 1
+    return proximoNumero
 }
 console.log(sequenciaImpar(numeros))
 console.log(sequenciaPares(numerosPares))
 console.log(sequenciaPerfeita(numerosPerfeitos))
 console.log(sequenciaQuadradosPar(numerosQuadradosPares))
 console.log(sequenciaFibonacci(numerosFibonacci))
+console.log(sequenciaIrregular(numerosSequenciais))
