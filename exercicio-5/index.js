@@ -1,5 +1,13 @@
 let palavra = 'cachorro'
-const numerosImpares = () =>{
-    let numeros = [1,3,5,7]
+
+const inverterPalavras = (palavra) =>{
+    let novaPalavra = ''
+
+    for(let i = palavra.length - 1; i >=0; i--){
+        novaPalavra += palavra[i]
+    }
     
+    return novaPalavra
 }
+
+console.log(inverterPalavras(palavra))

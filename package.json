@@ -7,7 +7,7 @@
   "main": "index.js",
   "devDependencies": {},
   "scripts": {
-    "dev": "node exercicio-3/index.js"
+    "dev": "node exercicio-5/index.js"
   },
   "keywords": [],
   "author": "",
