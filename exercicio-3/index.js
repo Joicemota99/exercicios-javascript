@@ -1,7 +1,9 @@
 let numeros = [1,3,5,7]
 let numerosPares = [2,4,8,16,32,64]
 let numerosPerfeitos = [0,1,4,9,16,25,36]
-
+let numerosQuadradosPares = [4,16,36,64]
+let numerosFibonacci = [1,1,2,3,5,8]
+// A)
 const sequenciaImpar = (numeros) =>{
   let proximoNumero
   let diferenca
@@ -12,7 +14,7 @@ const sequenciaImpar = (numeros) =>{
 
   return proximoNumero
 }
-
+// B)
 const sequenciaPares = (numerosPares) =>{
     let multiplos
 
@@ -20,7 +22,7 @@ const sequenciaPares = (numerosPares) =>{
     
     return multiplos
 }
-
+// C)
 const sequenciaPerfeita = (numerosPerfeitos) =>{
     let proximoNumero = Math.max(...numerosPerfeitos) + 1
     for(let i = proximoNumero; ;i++){
@@ -36,8 +38,35 @@ const conferirQuadradoPerfeito=(numero)=>{
     let raiz = Math.sqrt(numero)
     return Number.isInteger(raiz)
 }
+// D)
+const sequenciaQuadradosPar = (numerosQuadradosPares) =>{
+    let proximoNumero = Math.max(...numerosQuadradosPares) + 1
+    for(let i = proximoNumero; ; i++){
+        if(conferirQuadradoPar(proximoNumero)){
+            return proximoNumero
+        }
+        proximoNumero++
+    }
+}
 
+const conferirQuadradoPar=(numero)=>{
+    let raiz = Math.sqrt(numero)
+    return raiz % 2 === 0
+}
+// E)
+const sequenciaFibonacci = (valor) =>{
+    let valor1 = valor[valor.length - 1]
+    let valor2 = valor[valor.length - 2]
+    let proximoValor
 
+    proximoValor = valor1 + valor2
+
+    return proximoValor
+    
+    
+}
 console.log(sequenciaImpar(numeros))
 console.log(sequenciaPares(numerosPares))
 console.log(sequenciaPerfeita(numerosPerfeitos))
+console.log(sequenciaQuadradosPar(numerosQuadradosPares))
+console.log(sequenciaFibonacci(numerosFibonacci))
